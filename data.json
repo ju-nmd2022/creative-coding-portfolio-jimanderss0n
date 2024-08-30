@@ -3,5 +3,20 @@
     "file": "experiments/example.js",
     "name": "Name of your experiment",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+  },
+  {
+    "file": "experiments/VeraMolnarSquares.js",
+    "name": "Colored Squares",
+    "description": "Artwork by Vera Molner of squares in a grid with some ranomness. The Idea was to recreate his work. I started with a code from Garrit, figured out the valules and changed according to the artwork so that it looked the same. I took some help to understand by Chatgpt and added colors."
+  },
+  {
+    "file": "experiments/VeraMolnarSquaresVariant.js",
+    "name": "Colored Squares V1",
+    "description": "Artwork by Vera Molner of squares in a grid with some ranomness. The Idea was to recreate his work with a twist. With the recreation there, I experimented with values and added a noise from an earlier tutorial"
+  },
+  {
+    "file": "experiments/VeraMolnarSquaresVariant2.js",
+    "name": "Colored Squares V2",
+    "description": "Artwork by Vera Molner of squares in a grid with some ranomness. The Idea was to recreate his work with a twist. With the recreation there, I experimented with values and added a noise to the colors with some help of GPT"
   }
 ]
