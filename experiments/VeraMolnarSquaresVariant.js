@@ -13,7 +13,7 @@ function drawLayers(x, y, size, layers) {
   let varianceFactor = 1.6;
   const variance = (size / layers) * varianceFactor;
   noFill();
-  strokeWeight(1);
+  strokeWeight(2);
   //rectMode(CENTER);
   for (let i = 2.8; i < layers; i++) {
     const s = (size / layers) * i;
