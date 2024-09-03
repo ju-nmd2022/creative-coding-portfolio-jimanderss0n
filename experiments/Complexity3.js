@@ -95,7 +95,7 @@ const squareY = (innerHeight - squareSize) / 4;
 
 function generateField() {
   let field = [];
-  noiseSeed(2);
+  noiseSeed(90);
 
   for (let x = 0; x < maxCols; x++) {
     field.push([]);

@@ -1,10 +1,5 @@
 // Array of colors
-const colors = [
-  color(0, 0, 255),
-  color(100, 100, 255),
-  color(200, 200, 255),
-  color(255, 255, 255),
-];
+const colors = [color(80, 80, 255), color(100, 100, 255), color(255, 30, 255)];
 
 class Agent {
   constructor(x, y, maxSpeed, maxForce) {
