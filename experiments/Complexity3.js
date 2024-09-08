@@ -1,11 +1,3 @@
-// Array of colors
-const colors = [
-  color(0, 0, 255),
-  color(100, 100, 255),
-  color(200, 200, 255),
-  color(255, 255, 255),
-];
-
 class Agent {
   constructor(x, y, maxSpeed, maxForce) {
     this.position = createVector(x, y);
@@ -56,6 +48,13 @@ class Agent {
 
   //Gpt to get color fade
   draw() {
+    // Array of colors
+    const colors = [
+      color(0, 0, 255),
+      color(100, 100, 255),
+      color(200, 200, 255),
+      color(255, 255, 255),
+    ];
     push();
 
     // Calculate the interpolation factor based on the agent's position
