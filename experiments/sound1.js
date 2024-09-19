@@ -68,7 +68,7 @@ class Agent {
     let finalColor = lerpColor(colorX, colorY, 0.5);
 
     stroke(finalColor);
-    strokeWeight(0.2);
+    strokeWeight(20);
     line(
       this.lastPosition.x,
       this.lastPosition.y,
@@ -87,14 +87,14 @@ function setup() {
   generateAgents();
 }
 
-const squareSize = 500;
+const squareSize = 1400;
 const squareX = (innerWidth - squareSize) / 4;
 const squareY = (innerHeight - squareSize) / 4;
 
 //Some gpt for centering lines
 function generateField() {
   let field = [];
-  noiseSeed(Math.random() * 100);
+  noiseSeed(Math.random() * 4);
 
   for (let x = 0; x < maxCols; x++) {
     field.push([]);
@@ -111,8 +111,8 @@ function generateField() {
         posY < squareY + squareSize
       ) {
         // flow to center
-        let centerX = squareX + squareSize / 2;
-        let centerY = squareY + squareSize / 2;
+        let centerX = squareX + squareSize / 50;
+        let centerY = squareY + squareSize / 50;
 
         //vectors point towards the center of the square
         vector = p5.Vector.sub(
@@ -122,11 +122,11 @@ function generateField() {
         vector.normalize(); // Normalize to make it a unit vector
 
         // Optionally add a noise-based random variation to the vector direction
-        let noiseVal = noise(x / divider, y / divider) * Math.PI * 0.5;
+        let noiseVal = noise(x / divider, y / divider) * Math.PI * 1;
         vector.rotate(noiseVal);
       } else {
         // Outside the square: more random, e.g., generated using noise
-        const value = noise(x / divider, y / divider) * Math.PI * 2;
+        const value = noise(x / divider, y / divider) * Math.PI * 8;
         vector = p5.Vector.fromAngle(value);
       }
 
@@ -137,7 +137,7 @@ function generateField() {
 }
 
 function generateAgents() {
-  for (let i = 0; i < 150; i++) {
+  for (let i = 0; i < 1; i++) {
     let agent = new Agent(
       Math.random() * innerWidth,
       Math.random() * innerHeight,
@@ -148,7 +148,7 @@ function generateAgents() {
   }
 }
 
-const fieldSize = 50;
+const fieldSize = 200;
 const maxCols = Math.ceil(innerWidth / fieldSize);
 const maxRows = Math.ceil(innerHeight / fieldSize);
 const divider = 4;
@@ -156,6 +156,8 @@ let field;
 let agents = [];
 
 function draw() {
+  // Clear the background with a semi-transparent color to create a fading effect
+  background(250, 250, 250, 14); // Last parameter controls the fade effect
   for (let agent of agents) {
     const x = Math.floor(agent.position.x / fieldSize);
     const y = Math.floor(agent.position.y / fieldSize);
