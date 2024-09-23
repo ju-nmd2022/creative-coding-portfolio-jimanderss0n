@@ -27,6 +27,9 @@ class Agent {
     this.velocity.limit(this.maxSpeed);
     this.position.add(this.velocity);
     this.acceleration.mult(0);
+
+    // Adjust pitch based on Y position
+    this.adjustPitch();
   }
 
   checkBorders() {
@@ -46,14 +49,18 @@ class Agent {
     }
   }
 
+  // Adjust synth pitch based on the Y-coordinate of the agent
+  adjustPitch() {
+    let minPitch = 100; // Minimum frequency (low pitch)
+    let maxPitch = 1000; // Maximum frequency (high pitch)
+    let pitch = map(this.position.y, 0, innerHeight, minPitch, maxPitch); // Map Y to pitch
+    synth.frequency.setValueAtTime(pitch, Tone.now()); // Update synth pitch
+  }
+
   //Gpt
   draw() {
     // Array of colors
-    const colors = [
-      color(80, 80, 255),
-      color(100, 100, 255),
-      color(255, 30, 255),
-    ];
+    const colors = [color(0, 100, 255), color(255, 0, 0), color(255, 0, 0)];
     push();
 
     // Calculate the interpolation factor based on the agent's position
@@ -85,6 +92,10 @@ function setup() {
   background(250, 250, 250);
   field = generateField();
   generateAgents();
+
+  // Initialize the synthesizer using Tone.js
+  synth = new Tone.Synth().toDestination();
+  synth.triggerAttack("C4"); // Start playing a note
 }
 
 const squareSize = 1400;
@@ -154,6 +165,7 @@ const maxRows = Math.ceil(innerHeight / fieldSize);
 const divider = 4;
 let field;
 let agents = [];
+let synth; // Declare the synth variable
 
 function draw() {
   // Clear the background with a semi-transparent color to create a fading effect
@@ -166,5 +178,12 @@ function draw() {
     agent.update();
     agent.checkBorders();
     agent.draw();
+  }
+}
+
+// Handle key press to start the sound for browsers that require user interaction
+function keyPressed() {
+  if (Tone.context.state !== "running") {
+    Tone.context.resume(); // Resume the audio context
   }
 }

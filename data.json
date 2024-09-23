@@ -16,17 +16,17 @@
   },
   {
     "file": "experiments/VeraMolnarVertexes.js",
-    "name": "Square Space",
+    "name": "Vera Molnar",
     "description": "Artwork by Vera Molner of vertexes in a grid with some ranomness. The Idea was to recreate her work. I started with a code from Garrit, changed the vertexes to match the artwork and then continued with variation to add color and other interesting aspects to the artwork."
   },
   {
     "file": "experiments/VeraMolnarVertexes2.js",
-    "name": "Square Space",
+    "name": "Vera Molnar 2",
     "description": "Artwork by Vera Molner of vertexes in a grid with some ranomness. The Idea was to recreate her work. I started with a code from Garrit, changed the vertexes to match the artwork and then continued with variation to add color and other interesting aspects to the artwork."
   },
   {
     "file": "experiments/VeraMolnarVertexes3.js",
-    "name": "Square Space",
+    "name": "Vera Molnar 3",
     "description": "Artwork by Vera Molner of vertexes in a grid with some ranomness. The Idea was to recreate her work. I started with a code from Garrit, changed the vertexes to match the artwork and then continued with variation to add color and other interesting aspects to the artwork."
   },
   {
@@ -36,12 +36,17 @@
   },
   {
     "file": "experiments/Complexity2.js",
-    "name": "Square Space",
+    "name": "Square Space 2",
     "description": "A controled flow field shaped as a circle with some randomness to it. The initial idea was to take an existing flow field and controle it. I experimented with values on the flow field and added gradient with blue and purple. I then manipulated the the vertexes to make them follow a desired shape"
   },
   {
     "file": "experiments/Complexity3.js",
-    "name": "Square Space",
+    "name": "Square Space 3",
     "description": "A controled flow field with lines that goes closer and closer to a shape in the middle of the screen. The initial idea was to take an existing flow field and controle it. I experimented with values on the flow field and added gradient with blue and purple. I then manipulated the the vertexes to make them follow a desired shape"
+  },
+  {
+    "file": "experiments/sound1 copy 2.js",
+    "name": "sound",
+    "description": "test not done"
   }
 ]
