@@ -47,6 +47,6 @@
   {
     "file": "experiments/sound1 copy 2.js",
     "name": "sound",
-    "description": "test not done"
+    "description": "I took one of my previous artworks, in this case the flowfield, and added sound. The dark blue line in the flow field is connected to a synth playing triad chords in an arpeggio style in the C minor scale. the further up it goes on the canvas, it will play a chord higher up in the scale. The further it goes to the right, a lowpass filter will be clearer."
   }
 ]
